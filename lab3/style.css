@@ -1,0 +1,219 @@
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #fff7fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header (Flexbox) */
+.header {
+    background: #ffcae6;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d6006d;
+    transform: scale(1.1);
+}
+
+/* Hero Section (Flexbox) */
+.hero {
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 1.5s ease;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* 🌈 Full Stack Developer Animated Text */
+.fullstack {
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #f64b7b, #ff8ad4, #ffb3e6, #f64b7b);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: colorShift 5s ease-in-out infinite;
+}
+
+@keyframes colorShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero-desc {
+    font-size: 1rem;
+}
+
+.hero-img img {
+    width: 220px;
+    border-radius: 10px;
+}
+
+/* About */
+.about {
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.about-img {
+    width: 150px;
+    border-radius: 50%;
+    margin: 1rem 0;
+}
+
+/* Projects (CSS Grid) */
+.projects {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.project-card {
+    background: #ffe0f0;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    background: #ffc2e0;
+}
+
+/* Skills Grid */
+.skills {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.skill-card {
+    padding: 1rem;
+    background: #ffd6ec;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+    background: #ffb8dd;
+}
+
+/* Contact Form */
+.contact {
+    padding: 3rem 2rem;
+}
+
+form {
+    max-width: 350px;
+    margin: auto;
+    background: #ffe8f5;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.4rem;
+    border: 1px solid #ff9ccd;
+    border-radius: 8px;
+}
+
+button {
+    margin-top: 1rem;
+    padding: 0.7rem;
+    width: 100%;
+    background: #f06292;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #b62754;
+    transform: translateY(-3px);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background: #ffd7ed;
+    margin-top: 2rem;
+}
+
+/* Animation: Fade In */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    .hero-text {
+        max-width: 100%;
+    }
+}
