@@ -1,0 +1,416 @@
+/* ---------------- GLOBAL ---------------- */
+:root {
+    --red: #ff4d4d;
+    --yellow: #ffa31a;
+    --blue: #4d88ff;
+    --light: #fff7f2;
+    --text: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: var(--light);
+    color: var(--text);
+}
+
+/* ---------------- NAVBAR ---------------- */
+.navbar {
+    background: white;
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--red);
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--text);
+    transition: .3s;
+}
+
+nav a:hover {
+    color: var(--red);
+    transform: scale(1.1);
+}
+
+.login-btn {
+    padding: .5rem 1.2rem;
+    background: var(--red);
+    border: none;
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+.login-btn:hover {
+    background: var(--yellow);
+}
+
+/* ---------------- HERO ---------------- */
+.hero {
+    display: flex;
+    padding: 3rem 5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.hero-text span {
+    color: var(--red);
+}
+
+.cta {
+    margin-top: 20px;
+    padding: .8rem 2rem;
+    background: var(--yellow);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: .3s;
+}
+.cta:hover {
+    background: var(--red);
+    color: white;
+}
+
+
+/* ---------------- EXISTING CSS ABOVE ---------------- */
+
+/* ---------------- SEARCH BAR SECTION ---------------- */
+.search-section {
+    padding: 2.5rem 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar {
+    background: white;
+    padding: 1rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 15px;
+    width: 80%;
+    align-items: center;
+}
+
+.search-bar input,
+.search-bar select {
+    padding: .8rem 1.2rem;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    outline: none;
+    flex: 1;
+    font-size: 1rem;
+    transition: all .3s ease;
+}
+
+.search-bar input:focus,
+.search-bar select:focus {
+    border-color: var(--red);
+    box-shadow: 0 0 6px rgba(255, 77, 77, 0.4);
+}
+
+.search-bar button {
+    padding: .9rem 2rem;
+    background: var(--red);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: 600;
+}
+
+.search-bar button:hover {
+    background: var(--yellow);
+    color: black;
+}
+
+/* Mobile Responsive */
+@media (max-width: 700px) {
+    .search-bar {
+        flex-direction: column;
+        width: 100%;
+        border-radius: 25px;
+    }
+
+    .search-bar input,
+    .search-bar select,
+    .search-bar button {
+        width: 100%;
+    }
+}
+
+
+/* ---------------- CATEGORY ---------------- */
+.categories {
+    padding: 3rem 5rem;
+    text-align: center;
+}
+
+.categories .grid {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: .3s;
+    cursor: pointer;
+}
+.card:hover {
+    transform: translateY(-7px);
+    background: var(--yellow);
+    color: white;
+}
+
+/* ---------------- RESTAURANTS ---------------- */
+.restaurants {
+    padding: 3rem 5rem;
+}
+
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.restaurant-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: .3s;
+}
+.restaurant-card:hover {
+    transform: scale(1.05);
+}
+
+.restaurant-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.info {
+    padding: 1rem;
+}
+
+/* ---------------- REVIEWS ---------------- */
+.reviews {
+    padding: 3rem 5rem;
+    background: white;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.review-card {
+    background: var(--light);
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.review-card img {
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+
+/* ---------------- OFFERS SECTION ---------------- */
+.offers {
+    padding: 3rem 5rem;
+    text-align: center;
+}
+
+.offers h2 {
+    margin-bottom: 2rem;
+}
+
+.offer-grid {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.offer-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.offer-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.offer-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.promo-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .6rem 1.2rem;
+    background: var(--red);
+    color: white;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: .3s;
+}
+
+.promo-btn:hover {
+    background: var(--yellow);
+    color: black;
+}
+
+.promo-btn.yellow {
+    background: var(--yellow);
+    color: black;
+}
+
+.promo-btn.yellow:hover {
+    background: var(--red);
+    color: white;
+}
+
+.promo-btn.blue {
+    background: var(--blue);
+}
+
+.promo-btn.blue:hover {
+    background: var(--yellow);
+    color: black;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .offer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .offer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ---------------- APP DOWNLOAD ---------------- */
+.app {
+    padding: 3rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons button {
+    margin-right: 15px;
+    background: var(--blue);
+    color: white;
+    padding: .7rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.buttons button:hover {
+    background: var(--red);
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+    background: #222;
+    color: white;
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.copy {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+    opacity: .6;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 900px) {
+    .hero, .app {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .categories .grid,
+    .restaurant-grid,
+    .review-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    nav { display: none; }
+    .categories .grid,
+    .restaurant-grid,
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+}
