@@ -59,4 +59,3 @@ project-folder
 * Basic animations for headings/buttons
 * Clean and well-indented HTML & CSS
 
----
